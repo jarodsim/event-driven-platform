@@ -2,7 +2,7 @@
 
 ## 🎯 Objetivo
 
-Criar uma arquitetura distribuída e resiliente baseada em eventos, com múltiplos serviços desacoplados que processam dados de forma assíncrona, utilizando os principais serviços da AWS e infraestrutura como código com Terraform.
+Criar uma arquitetura distribuída baseada em eventos, com serviços desacoplados que processam dados de forma assíncrona, utilizando os principais serviços da AWS e Terraform.
 
 ---
 
@@ -58,11 +58,11 @@ flowchart TD
 * AWS Lambda
 * AWS API Gateway
 * AWS EventBridge
-* AWS SQS (com DLQ)
-* AWS CloudWatch (Logs)
-* AWS IAM (roles por módulo)
-* Terraform (modularizado)
-* Python (para Lambdas)
+* AWS SQS - Com DLQ
+* AWS CloudWatch
+* AWS IAM
+* Terraform
+* Python
 
 ---
 
@@ -73,11 +73,3 @@ flowchart TD
 3. Cada serviço recebe o evento e processa
 4. Erros vão para DLQs
 5. Logs e métricas são monitorados
-
----
-
-## 📌 Extras (opcional)
-
-* Implementar retries com backoff
-* Expor um endpoint `/status` para consultar eventos recentes
-
