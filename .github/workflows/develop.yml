@@ -18,3 +18,4 @@ jobs:
       aws-region: us-east-1
       aws-statefile-s3-bucket: ${{ vars.STATEFILE_S3_BUCKET }}
       aws-lock-dynamodb-table: ${{ vars.LOCK_DYNAMODB_TABLE }}
+      destroy-only: true
